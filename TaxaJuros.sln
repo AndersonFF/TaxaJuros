@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaxaJuros", "TaxaJuros", "{65592303-2470-4EBD-87ED-B7C41B1D7B1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{EBE24F63-62EF-4F3C-B5F6-1C489728560E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{59A94229-BD42-4053-BFF6-4B8BC775A273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaJutosApi", "TaxaJutosApi\TaxaJutosApi.csproj", "{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api2", "Api2", "{E1565FAB-6E53-462E-8092-8EB446D3BFA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBE24F63-62EF-4F3C-B5F6-1C489728560E} = {65592303-2470-4EBD-87ED-B7C41B1D7B1B}
+		{59A94229-BD42-4053-BFF6-4B8BC775A273} = {65592303-2470-4EBD-87ED-B7C41B1D7B1B}
+		{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE} = {EBE24F63-62EF-4F3C-B5F6-1C489728560E}
+		{E1565FAB-6E53-462E-8092-8EB446D3BFA1} = {65592303-2470-4EBD-87ED-B7C41B1D7B1B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F41ACD19-D0E0-4E16-BE52-0BC446BA10B5}
+	EndGlobalSection
+EndGlobal
