@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Globalization;
 using TaxaJutosApi.Domain.Interface;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -20,11 +21,11 @@ namespace TaxaJutosApi.Controllers
         [HttpGet("/taxaJuros")]
         [EnableCors("AllowMyOrigin")]
         [ProducesResponseType(200)]
-        public ActionResult<decimal> Get()
+        public ActionResult<string> Get()
         {
             try
             {
-                return Ok(0.01);
+                return Ok(_taxaJurosService.GetTaxaJuros().ToString("F2", CultureInfo.CurrentCulture));
             }
             catch (Exception ex)
             {

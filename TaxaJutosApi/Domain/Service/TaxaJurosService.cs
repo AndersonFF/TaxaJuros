@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TaxaJutosApi.Domain.Extensão;
 using TaxaJutosApi.Domain.Interface;
 
@@ -11,9 +8,25 @@ namespace TaxaJutosApi.Domain.Service
     public class TaxaJurosService : ITaxaJurosRequest
     {
         private IOptions<AppSettings> configuracoes;
+        public TaxaJurosService(IOptions<AppSettings> configuracoes)
+        {
+            this.configuracoes = configuracoes;
+        }
+
         public decimal GetTaxaJuros()
         {
-            return configuracoes.Value.TaxaJuros;
+            try
+            {
+                int valorInteiro;
+                if(int.TryParse(this.configuracoes.Value.TaxaJuros.ToString(), out valorInteiro))
+                {
+                    return this.configuracoes.Value.TaxaJuros / 100;
+                }
+                return this.configuracoes.Value.TaxaJuros;
+            }
+            catch (Exception e) {
+                throw new ApplicationException("Valor de taxa de juros configurado se encontra fora do padrão aceito pela aplicação, favor verificar.");
+            }
         }
     }
 }

@@ -18,12 +18,6 @@ namespace TaxaJutosApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
-            Configuration = new ConfigurationBuilder()
-              .SetBasePath(Directory.GetCurrentDirectory())
-              .AddJsonFile("appsettings.json", optional: false)
-              .AddEnvironmentVariables()
-              .Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -35,7 +29,7 @@ namespace TaxaJutosApi
         
             services.AddScoped<ITaxaJurosRequest, TaxaJurosService>();
 
-            services.Configure<AppSettings>(options => Configuration.GetSection("AppSettings"));
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddCors(options =>
             {
