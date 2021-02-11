@@ -7,7 +7,7 @@ namespace TaxaJutosApi.Domain.Service
 {
     public class TaxaJurosService : ITaxaJurosRequest
     {
-        private IOptions<AppSettings> configuracoes;
+        private readonly IOptions<AppSettings> configuracoes;
         public TaxaJurosService(IOptions<AppSettings> configuracoes)
         {
             this.configuracoes = configuracoes;

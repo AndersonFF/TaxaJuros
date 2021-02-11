@@ -1,25 +1,30 @@
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
 using System.Globalization;
-using TaxaJutosApi.Domain.Extensão;
+using TaxaJutosApi.Domain.Interface;
 using TaxaJutosApi.Domain.Service;
 using Xunit;
 
 namespace TesteApiTaxaJuros
 {
-    public class TesteApi
+    public class TesteApi : IClassFixture<Inicializar>
     {
-        private IOptions<AppSettings> configuracoes;
-        public TesteApi(IOptions<AppSettings> configuracoes)
+
+        private readonly ServiceProvider provedorServico;
+
+        public TesteApi(Inicializar inicializar)
         {
-            this.configuracoes = configuracoes;
+            provedorServico = inicializar.ProvedorServico;
         }
 
         [Fact]
         public void ObterTaxaJuros()
         {
-            var taxajuros = new TaxaJurosService(this.configuracoes);
-            decimal resultado = taxajuros.GetTaxaJuros();
+
+            var teste = provedorServico.GetService<ITaxaJurosRequest>();
+            
+            decimal resultado = teste.GetTaxaJuros();
             Assert.Equal("0,01", resultado.ToString("F2", CultureInfo.CurrentCulture));
         }
     }
