@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using System;
-using TaxaJutosApi.Domain.Extensão;
+using TaxaJutosApi.Domain.Model;
 using TaxaJutosApi.Domain.Interface;
 
 namespace TaxaJutosApi.Domain.Service

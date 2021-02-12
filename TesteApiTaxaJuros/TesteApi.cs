@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
@@ -12,16 +13,17 @@ namespace TesteApiTaxaJuros
     {
 
         private readonly ServiceProvider provedorServico;
-
+        private readonly IConfiguration configuracao;
         public TesteApi(Inicializar inicializar)
         {
             provedorServico = inicializar.ProvedorServico;
+            configuracao = inicializar.configuracao;
         }
 
         [Fact]
         public void ObterTaxaJuros()
         {
-
+            
             var teste = provedorServico.GetService<ITaxaJurosRequest>();
             
             decimal resultado = teste.GetTaxaJuros();

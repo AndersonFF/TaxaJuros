@@ -1,17 +1,24 @@
+using CalculadoraTaxaJurosApi.Domain.Interface;
+using CalculadoraTaxaJurosApi.Domain.Service;
+using CalculadoraTaxaJurosApi.Infra.Interface;
+using CalculadoraTaxaJurosApi.Infra.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.IO;
-using TaxaJutosApi.Domain.Model;
-using TaxaJutosApi.Domain.Interface;
-using TaxaJutosApi.Domain.Service;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using TaxaJutosApi.Domain.Model;
 
-namespace TaxaJutosApi
+namespace CalculadoraTaxaJurosApi
 {
     public class Startup
     {
@@ -26,8 +33,11 @@ namespace TaxaJutosApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-        
-            services.AddScoped<ITaxaJurosRequest, TaxaJurosService>();
+
+            services.AddScoped<ICalculaTaxaJuros, CalculaTaxaJurosService>();
+            services.AddScoped<IShowmeTheCode, ShowMeTheCodeService>();
+            services.AddTransient<ITaxaJurosApi, TaxaJurosApiService>();
+            services.AddTransient<HttpClient, HttpClient>();
 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
@@ -43,7 +53,7 @@ namespace TaxaJutosApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CalculaTaxaJurosAPI", Version = "v1" });
             });
         }
 
@@ -56,14 +66,14 @@ namespace TaxaJutosApi
             }
 
             app.UseHttpsRedirection();
-           
+
             app.UseRouting();
 
             app.UseSwagger();
 
             app.UseSwaggerUI(opt =>
             {
-                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "TaxaJurosAPI");
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "CalculaTaxaJurosAPI");
                 opt.RoutePrefix = string.Empty;
             });
 
@@ -78,7 +88,6 @@ namespace TaxaJutosApi
             {
                 endpoints.MapControllers();
             });
-
         }
     }
 }

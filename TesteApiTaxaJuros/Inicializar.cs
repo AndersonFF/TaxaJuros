@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Text;
-using TaxaJutosApi.Domain.Extensão;
+using TaxaJutosApi.Domain.Model;
 using TaxaJutosApi.Domain.Interface;
 using TaxaJutosApi.Domain.Service;
 
@@ -17,9 +17,16 @@ namespace TesteApiTaxaJuros
         {
             var servicos = new ServiceCollection();
 
-             RegistrarServicos(servicos);
-           
-             ProvedorServico = servicos.BuildServiceProvider();
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", true, true);
+
+            builder.AddEnvironmentVariables();
+            configuracao = builder.Build();
+
+            servicos.Configure<AppSettings>(configuracao.GetSection("AppSettings"));
+            RegistrarServicos(servicos);
+            
+            ProvedorServico = servicos.BuildServiceProvider();
         }
 
         private static void RegistrarServicos(IServiceCollection servicos)
@@ -27,7 +34,9 @@ namespace TesteApiTaxaJuros
             servicos.AddControllers();
 
             servicos.AddScoped<ITaxaJurosRequest, TaxaJurosService>();
-            
+
+            //servicos.Configure<AppSettings>(Configuracao.GetSection("AppSettings"));
+
         }
 
     }
