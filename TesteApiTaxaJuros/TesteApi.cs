@@ -3,8 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
 using System.Globalization;
-using TaxaJutosApi.Domain.Interface;
-using TaxaJutosApi.Domain.Service;
+using TaxaJurosApi.Domain.Interface;
+using TaxaJurosApi.Domain.Service;
 using Xunit;
 
 namespace TesteApiTaxaJuros

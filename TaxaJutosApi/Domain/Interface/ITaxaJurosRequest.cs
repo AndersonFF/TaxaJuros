@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TaxaJutosApi.Domain.Interface
+namespace TaxaJurosApi.Domain.Interface
 {
     public interface ITaxaJurosRequest
     {

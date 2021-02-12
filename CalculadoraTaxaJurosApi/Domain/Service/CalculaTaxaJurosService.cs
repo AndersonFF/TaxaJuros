@@ -2,7 +2,7 @@
 using CalculadoraTaxaJurosApi.Infra.Interface;
 using Microsoft.Extensions.Options;
 using System;
-using TaxaJutosApi.Domain.Model;
+using TaxaJurosApi.Domain.Model;
 
 namespace CalculadoraTaxaJurosApi.Domain.Service
 {

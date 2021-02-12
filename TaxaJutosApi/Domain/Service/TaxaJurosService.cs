@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
 using System;
-using TaxaJutosApi.Domain.Model;
-using TaxaJutosApi.Domain.Interface;
+using TaxaJurosApi.Domain.Model;
+using TaxaJurosApi.Domain.Interface;
 
-namespace TaxaJutosApi.Domain.Service
+namespace TaxaJurosApi.Domain.Service
 {
     public class TaxaJurosService : ITaxaJurosRequest
     {

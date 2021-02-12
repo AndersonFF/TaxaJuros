@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TaxaJutosApi.Domain.Model;
+using TaxaJurosApi.Domain.Model;
 
 namespace CalculadoraTaxaJurosApi.Domain.Service
 {

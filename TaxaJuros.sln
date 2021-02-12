@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{EBE24F63-62E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{59A94229-BD42-4053-BFF6-4B8BC775A273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaJutosApi", "TaxaJutosApi\TaxaJutosApi.csproj", "{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxaJurosApi", "TaxaJutosApi\TaxaJurosApi.csproj", "{3D6C8063-0FC7-43AD-AA87-25DCC19ACAAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteApiTaxaJuros", "TesteApiTaxaJuros\TesteApiTaxaJuros.csproj", "{622E6514-F32D-4999-8F79-98F1A5F9C632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteApiTaxaJuros", "TesteApiTaxaJuros\TesteApiTaxaJuros.csproj", "{622E6514-F32D-4999-8F79-98F1A5F9C632}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CalcularJuros", "CalcularJuros", "{89FAB04D-E18A-41FC-8647-D48AEFB93A59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraTaxaJurosApi", "CalculadoraTaxaJurosApi\CalculadoraTaxaJurosApi.csproj", "{2F7BA6AD-385D-4206-B1A1-CB9327AED3B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraTaxaJurosApi", "CalculadoraTaxaJurosApi\CalculadoraTaxaJurosApi.csproj", "{2F7BA6AD-385D-4206-B1A1-CB9327AED3B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{317C8F3C-7362-4C1A-BBEA-702DF10DE96A}"
 EndProject

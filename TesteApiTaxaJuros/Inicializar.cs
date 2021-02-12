@@ -2,9 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Text;
-using TaxaJutosApi.Domain.Model;
-using TaxaJutosApi.Domain.Interface;
-using TaxaJutosApi.Domain.Service;
+using TaxaJurosApi.Domain.Model;
+using TaxaJurosApi.Domain.Interface;
+using TaxaJurosApi.Domain.Service;
 
 namespace TesteApiTaxaJuros
 {

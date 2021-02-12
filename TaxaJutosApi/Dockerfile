@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
-COPY ["TaxaJutosApi/TaxaJutosApi.csproj", "TaxaJutosApi/"]
-RUN dotnet restore "TaxaJutosApi/TaxaJutosApi.csproj"
+COPY ["TaxaJurosApi/TaxaJurosApi.csproj", "TaxaJurosApi/"]
+RUN dotnet restore "TaxaJurosApi/TaxaJurosApi.csproj"
 COPY . .
-WORKDIR "/src/TaxaJutosApi"
-RUN dotnet build "TaxaJutosApi.csproj" -c Release -o /app/build
+WORKDIR "/src/TaxaJurosApi"
+RUN dotnet build "TaxaJurosApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "TaxaJutosApi.csproj" -c Release -o /app/publish
+RUN dotnet publish "TaxaJurosApi.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TaxaJutosApi.dll"]
+ENTRYPOINT ["dotnet", "TaxaJurosApi.dll"]

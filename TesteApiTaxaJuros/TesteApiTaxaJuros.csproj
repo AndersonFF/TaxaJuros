@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TaxaJutosApi\TaxaJutosApi.csproj" />
+    <ProjectReference Include="..\TaxaJurosApi\TaxaJurosApi.csproj" />
   </ItemGroup>
 
 </Project>

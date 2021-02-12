@@ -18,7 +18,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TaxaJutosApi": {
+    "TaxaJurosApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "Swagger",

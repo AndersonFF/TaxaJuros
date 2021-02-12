@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Globalization;
-using TaxaJutosApi.Domain.Interface;
+using TaxaJurosApi.Domain.Interface;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace TaxaJutosApi.Controllers
+namespace TaxaJurosApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]

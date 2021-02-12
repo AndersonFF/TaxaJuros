@@ -5,13 +5,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.IO;
-using TaxaJutosApi.Domain.Model;
-using TaxaJutosApi.Domain.Interface;
-using TaxaJutosApi.Domain.Service;
+using TaxaJurosApi.Domain.Model;
+using TaxaJurosApi.Domain.Interface;
+using TaxaJurosApi.Domain.Service;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TaxaJutosApi
+namespace TaxaJurosApi
 {
     public class Startup
     {

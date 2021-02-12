@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TaxaJutosApi.Domain.Model
+namespace TaxaJurosApi.Domain.Model
 {
     public class AppSettings
     {
